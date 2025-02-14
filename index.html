@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twisted RPS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Twisted Rock Paper Scissors</h1>
+        <button id="themeToggle">Toggle Theme</button>
+        <div class="game">
+            <button class="choice" data-choice="rock">🪨 Rock</button>
+            <button class="choice" data-choice="paper">📄 Paper</button>
+            <button class="choice" data-choice="scissors">✂️ Scissors</button>
+        </div>
+        <p id="result">Make a choice!</p>
+        <p>Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span> | Ties: <span id="ties">0</span></p>
+        <button id="reset">Reset Score</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

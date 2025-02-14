@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white;
+    color: black;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.game {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.choice {
+    background: #ddd;
+}
+
+.choice:hover {
+    background: #ccc;
+}
+
+#themeToggle {
+    background: #333;
+    color: white;
+}
+
+#reset {
+    background: red;
+    color: white;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .choice {
+    background: #666;
+    color: white;
+}
+
+.dark-mode #themeToggle {
+    background: #eee;
+    color: black;
+}
+
+.dark-mode #reset {
+    background: darkred;
+}
