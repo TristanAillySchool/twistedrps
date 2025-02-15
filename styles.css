@@ -1,62 +1,151 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: white;
-    color: black;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .container {
-    margin-top: 50px;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
-.game {
-    margin: 20px 0;
+.theme-container {
+    margin-bottom: 20px;
+}
+
+.theme-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.theme-card {
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.theme-card:hover {
+    transform: scale(1.1);
+    border-color: white;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.battle-zone {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.battle-block {
+    width: 120px;
+    height: 120px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes move-in {
+    0% { transform: translateX(-50px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fight-shake {
+    0% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.fight {
+    animation: fight-shake 0.5s ease-in-out;
+}
+
+@keyframes smoke {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(1.5); }
+}
+
+.smoke {
+    font-size: 50px;
+    opacity: 0;
+    position: absolute;
+    animation: smoke 1s ease-in-out;
+}
+
+.scoreboard {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+.scoreboard h2 {
+    margin-bottom: 15px;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px;
     margin: 5px;
+    font-size: 18px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
     border: none;
-    border-radius: 5px;
-    transition: background 0.2s;
 }
 
-.choice {
-    background: #ddd;
-}
-
-.choice:hover {
-    background: #ccc;
-}
-
-#themeToggle {
-    background: #333;
+button:hover {
+    transform: scale(1.1);
+    background: #ff4500;
     color: white;
 }
 
-#reset {
-    background: red;
-    color: white;
+.light {
+    background-color: white;
+    color: black;
 }
 
-.dark-mode {
+.dark {
     background-color: black;
     color: white;
 }
 
-.dark-mode .choice {
-    background: #666;
-    color: white;
+.cyberpunk {
+    background-color: #121212;
+    color: #0ff;
 }
 
-.dark-mode #themeToggle {
-    background: #eee;
-    color: black;
+.arcade {
+    background-color: yellow;
+    color: blue;
 }
 
-.dark-mode #reset {
-    background: darkred;
+.fantasy {
+    background-color: purple;
+    color: gold;
 }

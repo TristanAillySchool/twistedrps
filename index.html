@@ -3,22 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twisted RPS</title>
+    <title>Twisted Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Twisted Rock Paper Scissors</h1>
-        <button id="themeToggle">Toggle Theme</button>
-        <div class="game">
+
+        <div class="theme-container">
+            <h2>Choose Theme</h2>
+            <div class="theme-options">
+                <div class="theme-card" data-theme="light"><p>Classic</p></div>
+                <div class="theme-card" data-theme="dark"><p>Dark</p></div>
+                <div class="theme-card" data-theme="cyberpunk"><p>Cyberpunk</p></div>
+                <div class="theme-card" data-theme="arcade"><p>Arcade</p></div>
+                <div class="theme-card" data-theme="fantasy"><p>Fantasy</p></div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="player-area">
+                <h2>Player</h2>
+                <div id="playerBlock" class="battle-block"></div>
+            </div>
+
+            <div class="battle-zone">
+                <div id="fightAnimation">⚔️</div>
+            </div>
+
+            <div class="computer-area">
+                <h2>Computer</h2>
+                <div id="computerBlock" class="battle-block"></div>
+            </div>
+        </div>
+
+        <div class="scoreboard">
+            <h2>Scoreboard</h2>
+            <p>Wins: <span id="wins">0</span></p>
+            <p>Losses: <span id="losses">0</span></p>
+            <p>Ties: <span id="ties">0</span></p>
+            <button id="reset">Reset Score</button>
+        </div>
+
+        <div id="battleResult">Choose your move!</div>
+
+        <div class="choices">
             <button class="choice" data-choice="rock">🪨 Rock</button>
             <button class="choice" data-choice="paper">📄 Paper</button>
             <button class="choice" data-choice="scissors">✂️ Scissors</button>
+            <button class="choice" data-choice="lightning">⚡ Lightning</button>
+            <button class="choice" data-choice="lava">🔥 Lava</button>
+            <button class="choice" data-choice="wind">💨 Wind</button>
+            <button class="choice" data-choice="earth">🌍 Earth</button>
+            <button class="choice" data-choice="ice">❄ Ice</button>
+            <button class="choice" data-choice="fire">🔥 Fire</button>
+            <button class="choice" data-choice="water">💧 Water</button>
+            <button class="choice" data-choice="shadow">🕶 Shadow</button>
         </div>
-        <p id="result">Make a choice!</p>
-        <p>Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span> | Ties: <span id="ties">0</span></p>
-        <button id="reset">Reset Score</button>
     </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
